@@ -1,0 +1,1 @@
+ctrl + S -> 이름.html -> html 치면 코드 생성

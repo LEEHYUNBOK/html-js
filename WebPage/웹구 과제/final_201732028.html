@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>fianl</title>
+    <style>
+      .button{
+        text-decoration: none;
+        border-bottom: none;
+        color: #ffffff;
+      }
+      .allbuttom{
+        text-align: center;
+        width: 200px;
+        height: 37px;
+        font-size: 15pt;
+        background-color: #727272;
+        text-decoration: none;
+        border-bottom: none;
+        color:#ffffff;
+        margin: 10px;
+      }
+      .allbuttom:hover{
+        background-color: #cccccc;
+      }
+      .title{
+        text-align: center;
+      }
+      .a1{
+        text-align: center;
+        color:  #a0a09f;
+        transition-property: background-color;
+        transition-duration: 3s;
+        transition-timing-function: ease;
+        border-bottom: none;
+        padding:0px 30px;
+        text-decoration: none;
+      }
+      .a1:hover{
+        background-color: #bada55;
+      }
+      .text{
+        text-align: center;
+        height: 30px;
+        width: 980px;
+        color: #a0a09f;
+        padding: 10px;
+        border: none;
+      }
+      .bit{
+        text-align: center;
+        height: 100px;
+        vertical-align: middle;
+        display: table-cell;
+        font-size: 40px;
+        color: #a0a09f;
+      }
+      .bittext{
+      }
+      .p{
+        display: block;
+      }
+      .img{
+        position: relative;
+        background-image: url("head_bg.jpg");
+        height: 375px;
+        background-size: cover;
+      }
+      .content{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: white;
+        text-align: center;
+      }
+      .imgbuttom{
+        position: absolute;
+        top: 80%;
+        left: 42%;
+        text-align: center;
+        width: 200px;
+        height: 37px;
+        font-size: 15pt;
+        background-color: #727272;
+        color:#ffffff;
+      }
+      .imgbuttom:hover{
+        background-color: #cccccc;
+      }
+      .d{
+        font-size: 20pt;
+      }
+      .c{
+        font-size: 11pt;
+      }
+      .about{
+        width: 333px;
+        text-align: center;
+        margin: 117px 0px 0px 0px;
+      }
+      @keyframes alltitle{
+        from{
+          opacity: 0;
+          font-size: 3em;
+        }
+        to{
+          opacity: 1;
+          font-size: 50pt;
+        }
+      }
+      .alltitle2{
+        width: 100%;
+        height: 88px;
+      }
+      .line{
+        max-width: 100%;
+        height:3%;
+      }
+      .alltitle1{
+        width: 333px;
+        height: 87px;
+      }
+      .abouttitle{
+        background-color: #ffffff;
+        color: #a0a09f;
+        font-size: 50pt;
+        animation-name: alltitle;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .aboutbonmun{
+        width: 619px;
+        height: 130px;
+        font-size: 10pt;
+        color: #605e5e;
+        margin: 20px 0px;
+      }
+      .aboutbonmun:hover{
+        background-color: #b6e8e3;
+      }
+      .table{
+        table-layout: auto;
+        text-align: center;
+      }
+      .a{
+        font-size: 22px;
+        color: #605e5e;
+      }
+      .b{
+        font-size: 15px;
+        color: #605e5e;
+      }
+      .tablebonmun{
+        border: 3px solid black;
+      }
+      .work1{
+        width: 300px;
+        height: 300px;
+        table-layout: auto;
+        text-align: center;
+        border:1px solid black;
+      }
+      .work1:hover{
+        background-image: url("common02HP54S4.jpg");
+      }
+      .ul{
+        list-style: none;
+        margin: auto;
+        padding: 0;
+      }
+      .work2{
+        position: relative;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+        border:1px solid black;
+      }
+      .ul2-1{
+        width: 250px;
+        height: 100px;
+      }
+      .ul2-2{
+        width: 250px;
+        height: 100px;
+      }
+      .ul2-3{
+        width: 250px;
+        height: 100px;
+      }
+      .ul2-1:hover{
+        position: absolute;
+        padding: 0%;
+        transform: translate(-50%,-10%);
+        width: 250px;
+        height:250px;
+      }
+      .ul2-2:hover{
+        position: absolute;
+        padding: 0%;
+        transform: translate(-125px,-125px);
+        width: 250px;
+        height:250px;
+      }
+      .ul2-3:hover{
+        position: absolute;
+        padding: 0%;
+        transform: translate(-125px,-250px);
+        width: 250px;
+        height:250px;
+      }
+      .work3{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border:1px solid black;
+      }
+      .ul3{
+        animation-name: namemove;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes namemove {
+        from, to{
+          color: black;
+          height: 0px;
+        }
+        50%{
+          color: #bada55;
+          height:  100%;
+        }
+      }
+      .contact{
+        width: 980px;
+        padding: 48px 0px;
+      }
+      .contactbonmun1{
+        float: left;
+        text-align: left;
+        width: 254px;
+        font-size: 15px;
+        margin: 0px 35px 0px 0px;
+      }
+      .contactbonmun2{
+        float: right;
+        width: 689px;
+        text-align: left;
+      }
+      .contacttable{
+        border: 1px solid black;
+        font-size:20px;
+        width: 340px;
+        color: #605e5e;
+        text-align: left;
+      }
+      .contactinput{
+        margin: 0px 0px 5px 0px;
+        width: 340px;
+      }
+      .contacttable1{
+        text-align: right;
+      }
+      .last{
+        margin: 50px 0px;
+        float: left;
+        width: 100%;
+        text-align: center;
+      }
+      .last1{
+        display: table-cell;
+        vertical-align: middle;
+        margin: 30px;
+        width: 500px;
+        height: 17px;
+        font-size: 14px;
+        color: #a0a09f;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+<div id="Top">
+<div class="title">
+  <a href="#Bitcoin" class="a1">201732028</a>
+  <a href="#Bitcoin" class="a1">비트코인</a>
+  <a href="#About" class="a1">About</a>
+  <a href="#Services" class="a1">Services</a>
+  <a href="#Work" class="a1">Work</a>
+  <a href="#Contact" class="a1">Contact</a>
+</div>
+</div>
+
+<div><center>
+  <p><input type="text" class="text" placeholder="학번 이름을 입력하세요"></p>
+</center></div>
+
+<div id="Bitcoin">
+
+<center>
+<div class="bit">
+  <bit class="bittext">비트코인</bit>
+</div>
+</center>
+
+
+<div class="img">
+   <div class="content">
+      <ad class="d">블록체인 기술 기반의<br>온라인 암호화폐</ad>
+      <p class="c">2006년 10월 사토니 나카모토라는 가명을 쓰는 프로그래머가 개발하여, 2009년 1월 프로그램<br>
+        소스를 배포했다. 중앙은행이 없이 전 세계적 범위에서 p2p 방식으로 개인들 간에 자유롭게 송<br>
+        금 등의 금융거래를 할 수 있게 설계되어 있다.거래장부는 불록체인 기술을 바탕으로 전세계<br>
+        적인 범위에서 여러 사용자들의 서버에 분산하여 지정하기 때문에 해킹이 사실상 불가능 하다</p>
+   </div>
+   <div class="imgbuttom"><a href="#About" class="button">About</a></div>
+</div>
+
+
+</div>
+
+
+<div id="About">
+
+<table class="alltitle2">
+<tr>
+  <td width=35%><img src="line.png" class="line"></td>
+<td><center>
+  <div class="alltitle1">
+    <div class="abouttitle">About</div>
+  </div>
+</center>
+</td>
+  <td width=35%><img src="line.png" class="line"></td>
+</tr>
+</table>
+
+
+<div>
+<center>
+  <div>
+    <div class="aboutbonmun">
+       블록체인은 공공 거래 장부이며 가상 화폐로 거래할 때 발생 할 수 있는 해킹을 막는 기술이다.<br>
+      분산 데이터베이스의 한 형태로, 지속적으로 성장하는 데이터 기록 리스트로서 분사 노드의 운<br>
+      영자에 의한 임의 조작이 불가능하도록 고안되었다. 잘 알려진 블록체인의 응용사례는 암호화<br>
+      폐의 거래과정을 기록하는 탈중앙화된 전자장부로서 비트코인이 있다. 이 거래 기록은 의무적<br>
+      으로 암호화되고 블록체인 소프트웨어를 실해하는 컴퓨터상에서 운영된다. 비트코인을 비롯한<br>
+      대부분의 암호화폐들이 블록체인 기술 형태에 기반하고 있다.
+    </div>
+    <div class="allbuttom"><a href="#Services" class="button">Anchor2</a></div>
+  </div>
+</center>
+</div>
+
+
+</div>
+
+
+<div id="Services">
+
+<table class="alltitle2">
+<tr>
+  <td width=35%><img src="line.png" class="line"></td>
+<td><center>
+  <div class="alltitle1">
+    <div class="abouttitle">Services</div>
+  </div>
+</center>
+</td>
+  <td width=35%><img src="line.png" class="line"></td>
+</tr>
+</table>
+
+
+<div>
+<center>
+  <div>
+    <table class="table"width=80%>
+      <tr>
+        <td><img src="2017121221244707653d6eb469fd312448367_20171213081157613.jpg"height="170" width="170"></td>
+        <td><img src="0000400886_001_20171121065325116.jpg"height="170" width="170"></td>
+        <td><img src="IaW07JB3PM5y0aEGi0m6hOAYsTm0.jpg"height="170" width="170"></td>
+      </tr>
+      <tr class="tablebonmun">
+        <td><ad class="a">비트코인 지갑 설정</ad><p></p>
+            <ad class="b">비트코인을 구입하기 전에 우선 비트코<br>
+                          인을 보관할 곳이 필요하다. 비트코인 도<br>
+                          메인(Bitcoin.org) 사이트에는 여러 제작<br>
+                          업체의 지갑이 나열되어 있지만, 마이실<br>
+                          리엄, 코인베이스, 또는 블록체인과 같은<br>
+                          애플리케이션을 사용해 볼 수도 있다. 이<br>
+                          것들은 전세계에서 가장 인기있는 디지<br>
+                          털 지갑이다.
+           </ad>
+       <td><ad class="a">거래소에서 구매하기</ad><p/>
+           <ad class="b">가장 쉬운 방법은 현재 전세계에서 운영<br>
+                         되는 많은 거래소 가운데 하나를 이용하<br>
+                         는 것이다. 선택한 거래소에 가상 계좌를<br>
+                         개설하고 은행 계좌 정보를 입력해야 계<br>
+                         좌로 송금할 수 있다.모든 것을 디지털로<br>
+                         유지하려는 경우 많은 사람이 페이팔<br>
+                         (PayPal)을 이용한다. 한국에서는 선택한<br>
+                         거래소에 로그인하고 가상 계좌에 돈을<br>
+                         입금하고 비트코인을 구입하면 된다.
+           </ad>
+      <td><ad class="a">ATM 기기에서 구매하기</ad><p/>
+           <ad class="b">I'm제로 영국이나 미국,캐나다 및 다른<br>
+                         국가와 함께 한국에서도 ATM 기기를 통<br>
+                         해 비트코인을 구매하거나 교환할 수 있<br>
+                         다.이 ATM 기기는 오라인 거래소와 연결<br>
+                         되어 있어 사용자가 기기에 현금을 입금<br>
+                         해 구매할 수 있다.이들은 이미 온라인<br>
+                         으로 구매한 비트코인을 거래소에서 현<br>
+                         지 통화로 바꿀 수 있다.<br>
+           </ad>
+      </tr>
+    </table>
+    <div class="allbuttom"><a href="#Work" class="button">Work</a></div>
+  </div>
+<center>
+</div>
+
+
+</div>
+
+
+<div id="Work">
+
+
+<table class="alltitle2">
+<tr>
+  <td width=35%><img src="line.png" class="line"></td>
+<td><center>
+  <div class="alltitle1">
+    <div class="abouttitle">Work</div>
+  </div>
+</center>
+</td>
+  <td width=35%><img src="line.png" class="line"></td>
+</tr>
+</table>
+
+
+<div>
+<center>
+  <div>
+  <table>
+    <tr>
+      <td class="work1">
+        <ul class="ul">
+          <li>1. 성공회대학교</li>
+          <li>2. 미디어센터</li>
+          <li>3. 학생</li>
+        </ul>
+      </td>
+      <td class="work2">
+        <ul class="ul">
+          <li><img src="Final_Web\commonQCGM41VP.jpg" class="ul2-1"></li>
+          <li><img src="Final_Web\thumb-course-django2.jpg" class="ul2-2"></li>
+          <li><img src="Final_Web\12572969_1125129014177520_8250068487608048985_n.jpg" class="ul2-3"></li>
+        </ul>
+      </td>
+      <td class="work3">
+        <div class="ul3">
+          201732028이현복
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"> <center><div class="allbuttom"><a href="#Top" class="button">Back to Top</div></center></td>
+    </tr>
+  </tabel>
+</div>
+</center>
+</div>
+
+
+</div>
+
+
+<div id="Contact">
+
+
+<table class="alltitle2">
+<tr>
+  <td width=35%><img src="line.png" class="line"></td>
+<td><center>
+  <div class="alltitle1">
+    <div class="abouttitle">Contact</div>
+  </div>
+</center>
+</td>
+  <td width=35%><img src="line.png" class="line"></td>
+</tr>
+</table>
+
+
+<div class="contact">
+  <div class="contactbonmun1">
+    SeongKongHoe University 320,<br>
+    Yeondong-ro,Guro-gu Seoul,152-716, Republic of Korea.<br>
+    <br>
+    yujin7621@me.com<br>
+    Tel: 123-456-7890<br>
+    Fax: 123-456-7890<br>
+  </div>
+  <div class="contactbonmun2">
+    <table>
+      <tr class="contacttable">
+        <td><input class="contactinput" type="text" placeholder="이름"></td>
+        <td rowspan="5"><textarea class="contactinput" rows="5" cols="40" placeholder="메시지"></textarea></td>
+      </tr>
+      <tr class="contacttable">
+        <td><input class="contactinput" type="text" placeholder="이메일"></td>
+      </tr>
+      <tr class="contacttable">
+        <td><input class="contactinput" type="text" placeholder="제목"></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="contacttable1"><input type="submit" value="Send"></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+</div>
+
+
+<div class="last">
+  <center>
+    <div class="last1">&copy; 2017 by Name of Site. Webpage Construction 1. SungKongHoe UNIV.</div>
+  </center>
+</div>
+
+  </body>
+</html>
