@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+		/*
+        파일 이름 : hw6_1.html
+        작성자 : 이현복
+        작성일 : 2018-10-01
+        내용 : book 객체
+			   속성 : 제목(title), 가격(price), 발행연도(year)
+			   (1) book 객체를 선언할 때
+			   (2) 책의 제목을 적절히 지정
+			   (3) 책의 가격을 적절히 지정
+			   (4) 책의 발행연도를 적절히 지정
+			   (5) for in 반복문을 사용해서 key와 내용을 출력
+        */
+		var book = {
+			title : "JavaScript",
+			price : 19000,
+			year : 2018
+		};
+		var outprint = "";
+		for(var i in book){
+			outprint += i + " : " + book[i] + "\n";
+		}
+		alert(outprint);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

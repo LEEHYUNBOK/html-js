@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /*
+        파일 이름 : hw3_2.html
+        작성자 : 이현복
+        작성일 : 2018-09-12
+        내용 : 주민등록번호로부터 생년월일을 알아보는 프로그램을 작성하시오.
+               단, 조건문(if)은 사용하지 말고 2장에서 배운 연산자들을 이용할 것
+        */
+        var a = prompt("주민등록번호 앞자리 입력");
+        var b = prompt("주민등록번호 뒷자리 입력");
+        var c = (b[0] == 1 || 2) ? "19" : "20";
+        alert("생년월일은 다음과 같습니다.");
+        alert(c + a[0] + a[1]);
+        alert((a[2] > 0) ? a[2] + a[3] : a[3]);
+        alert((a[4] > 0) ? a[4] + a[5] : a[5]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

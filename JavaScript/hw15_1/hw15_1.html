@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title> 객체 조작 및 생성 </title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        /*
+	     파일 이름 : hw15_1.html
+	     작성자 : 이현복
+	     작성일 : 2018-11-21
+         내용 : - id=wrap 요소의 img 태그의 src 속성의 값을 불러와 id=txt에 텍스트로 생성.
+                - id=wrap 요소의 img의 너비를 200으로 변경
+                - id=box 요소의 img의 border를 제거
+	    */
+        //<![CDATA[
+        $(function () {
+            var name = $('p#wrap>img').attr('src');
+            $('p#txt').text(name);
+            $('p#wrap>img').attr('width', 200);
+            $('p#box>img').css('border', 'none');
+        });
+
+    </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <p id="wrap">
+        <img src="images/math_img_1.jpg" alt="가위" width="100" />
+    </p>
+    <p id="txt"></p>
+    <p id="box">
+        <img src="images/math_img_3.jpg" alt="보" width="100" border="2" />
+    </p>
+</body>
+</html>

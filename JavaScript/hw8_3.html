@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+		/*
+		 파일 이름 : hw8_3.html
+		 작성자 : 이현복
+		 작성일 : 2018-10-15
+		 내용 : 사용자에게 이메일을 입력받아 이메일이 유효한지 검사하는 프로그램을 작성하시오.
+				유효성 체크 : 도메인의 주소가 co.kr, com, net, or.kr, go.kr이 포함돼 
+				있는지 그리고 @이 포함되 있는지 학인
+				입력 : 이메일
+				출력: 유효하면 이메일 주소를 화면에 출력(document.write) 
+				유효하지 않으면 이메일이 잘못되었다고 경고창 출력
+		*/
+		var email = prompt("이메일을 입력하시오.");
+		if((email.match("co.kr") != null || 
+			email.match("com") != null ||
+			email.match("net") != null ||
+			email.match("or.kr") != null ||
+			email.match("go.kr") != null) &&
+			email.match("@") != null) {
+				document.write("유효한 이메일입니다." + "\n" + email);
+		}
+		else {
+			document.write("유효하지 않는 이메일입니다.");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

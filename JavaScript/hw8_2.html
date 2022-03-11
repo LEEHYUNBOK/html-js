@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+		/*
+		 파일 이름 : hw8_2.html
+		 작성자 : 이현복
+		 작성일 : 2018-10-15
+		 내용 : 사용자로부터 한 줄의 문장을 입력받아 문장의 길이와 
+				a 또는 A가 몇번 나오는지 알아내고, a과 A를 모두 *로 바꾸어 출력하는 프로그램을 작성하시오.
+				- 입력: 한 줄의 문장
+				- 출력: a 또는 A의 개수
+				- 실행 예
+				입력: An apple a day!
+				출력:
+				문장 = An apple a day! 
+				길이 = 15
+				a 또는 A의 개수 = 4
+				*n *pple * d*y!
+		*/
+		var str = prompt("입력");
+		var output = "";
+		output += "문장 = " + str + "\n";
+		var length = str.length;
+		output += "길이 = " + length + "\n";
+		var count = 0;
+		for(var i = 0; i<length;i++) {
+			if(str[i] == "a") {
+				count++;
+				str = str.replace("a","*");
+			}
+			if(str[i] == "A") {
+				count++;
+				str = str.replace("A","*");
+			}
+		}
+		output += "a 또는 A의 개수 = " + count+"\n";
+		output += str;
+		alert(output);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

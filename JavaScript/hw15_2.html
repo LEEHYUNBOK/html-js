@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script>
+        /*
+         파일 이름 : hw15_2.html
+         작성자 : 이현복
+         작성일 : 2018-11-21
+         내용 : not 방식를 이용하여 첫번째 li요소만 제외한 li의 배경색을 노란색으로 적용하여라
+        */
+        $(document).ready(function () {
+            $('ul > *').not(function (index) { return index == 0; }).css('background', 'yellow');
+        });
+    </script>
+</head>
+<body>
+    <ul id="myList">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+</html>

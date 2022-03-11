@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+	    /*
+        파일 이름 : hw5_1.html
+        작성자 : 이현복
+        작성일 : 2018-10-01
+        내용 : hw3_1에서 적정 몸무게 계산 및 출력하는 
+			   익명의 함수를 선언하고 이를 이용하는 프로그램을 작성하시오.
+			   매개변수 : 입력 받은 신장, 몸무게
+        */
+        var a = prompt("신장");
+        var b = prompt("몸무게");
+		var weight = function(a, b){
+			if ((a - 100) * 0.9 <= b) {
+			    alert("적정 몸무게 이상");
+			}
+			if ((a - 100) * 0.9 > b) {
+				alert("적정 몸무게 미만");
+			}
+		}
+		weight(a,b)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+		/*
+        파일 이름 : hw6_2.html
+        작성자 : 이현복
+        작성일 : 2018-10-08
+        내용 : hw6_1의 book 객체에서
+			   (1)저자(author) 속성(이름 적절히 부여)을 객체 외부에서 동적으로 추가하고
+			   (2) with 키워드를 사용하여 내용을 출력하시오.(코드 6-12 참조)
+        */
+		var book = {
+			title : "JavaScript",
+			price : 19000,
+			year : 2018,
+		};
+		book.author = "Brendan Eich";
+
+		var outprint = "";
+		with (book) {
+		outprint += 'title: ' + title + '\n';
+		outprint += 'price: ' + price + '\n';
+		outprint += 'year: ' + year + '\n';
+		outprint += 'author: ' + author;
+		}
+		alert(outprint);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

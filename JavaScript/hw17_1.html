@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script>
+        /*
+         파일 이름 : hw17_1.html
+         작성자 : 이현복
+         작성일 : 2018-12-10
+         내용 : - 버튼을 눌렀을 때 효과 메소드를 이용하여 h1이 점점 투명해지면서 숨겨지도록 하시오. 숨기는 속도는 1초
+        */
+        $(function () {
+            $('#btn').on('click', function () {
+                $('h1').fadeOut(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn">버튼</button>
+    <h1>내용</h1>
+</body>
+</html>

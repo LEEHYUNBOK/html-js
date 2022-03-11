@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+		<script>
+		/*
+        파일 이름 : hw6_3.html
+        작성자 : 이현복
+        작성일 : 2018-10-08
+        내용 : hw6_2의 book 객체에서
+			   (1) book 객체의 내용을 출력하는 toString 메소드를 동적으로 추가하고
+			   (2) alert(book.toString)을 사용하여 출력하시오.(코드 6_17 참조)
+		*/
+		var book = {
+			title : "JavaScript",
+			price : 19000,
+			year : 2018,
+			author : "Brendan Eich"
+		};
+		book.toString = function() {
+			var outprint ="";
+			for (var key in this) {
+				if(key != 'toString'){
+					outprint += key + " : " + this[key] + "\n"
+				}
+			}
+			return outprint
+		};
+		alert(book.toString());
+	</script>
+</head>
+<body>
+
+</body>
+</html>

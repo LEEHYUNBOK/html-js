@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script>
+        /*
+         파일 이름 : hw16_1.html
+         작성자 : 이현복
+         작성일 : 2018-12-03
+         내용 : - btn1 클릭했을 때 p의 태그의 배경을 yellow로
+                - btn2 더블 클릭했을 때 p의 태그 배경을 purple로 변경하시오.
+        */
+        $(function () {
+            $('#btn1').on('click', function () {
+                $('p').css('background-color', 'yellow');
+            });
+            $('#btn2').on('dblclick', function () {
+                $('p').css('background-color', 'purple');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn1">click</button>
+    <button id="btn2">dblclick</button>
+    <p>내용</p>
+</body>
+</html>

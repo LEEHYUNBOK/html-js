@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+		/*
+		 파일 이름 : hw9_2.html
+		 작성자 : 이현복
+		 작성일 : 2018-10-29
+		 내용 : hw9_1에서 새로운 창에 네이버가 페이지가 나오도록 버튼을 하나 추가하시오.
+		*/
+		var child = window.open('', '', 'width=400, height=300,left = 300,top = 10, location = 1, menubar=0');
+		var width = screen.width;
+		var height = screen.height;
+		var move = function(){
+			child.moveTo(200,300);
+			child.focus();
+		};
+		var resize = function(){
+			child.resizeTo(width/2,height/2);
+			child.focus();
+		};
+		var naver = function(){
+			child.location.href="http://www.naver.com";
+			child.focus();
+		};
+	</script>
+</head>
+<body>
+	<button onclick="move()"> 창 위치 변경 </button>
+	<button onclick="resize()"> 창 크기 변경 </button>
+	<button onclick="naver()"> 네이버로 </button>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+		/*
+        파일 이름 : hw7_1.html
+        작성자 : 이현복
+        작성일 : 2018-10-08
+        내용 : - hw6_3의 book 객체를 만들기 위한 Book 생성자 함수를 만들고 
+			- books라는 배열에 3개의 책 정보를 입력
+				myBook은 "java", 10000, 2014, 정우성
+				yourBook은 "database", 20000, 2013, 장동건
+				ourBook은 "computer", 30000, 2009, 강동원
+			- 세 책의 정보출력
+			- 재고할인(discount) 메소드를 동적으로 추가
+				  재고할인 - 매개변수는 없고, 발행연도가 2014면 10% 할인, 그 전이면 50% 할인하여 가격을 변경함
+			- 세 책을 재고 할인하고 정보출력
+			 책 정보 2회
+		*/
+		function Book(title, price, year, author){
+			this.title = title;
+			this.price = price;
+			this.year = year;
+			this.author = author;
+
+			this.toString = function(){
+				return this.title + " " + this.price + " " + this.year + " " + this.author;
+			};
+		}
+
+		Book.prototype.discount = function(){
+			if(this.year == 2014){
+				this.price = this.price - this.price/10;
+			}
+			else if (this.year < 2014){
+				this.price = this.price - this.price/2;
+			}
+		};
+
+		var books = {};
+		books.myBook = (new Book("java", 10000, 2014, "정우성"));
+		books.yourBook = (new Book("database", 20000, 2013, "장동건"));
+		books.ourBook = (new Book("computer", 30000, 2009, "강동원"));
+
+		var firstPrint = books.myBook.toString() + "\n" + books.yourBook.toString() + "\n" + books.ourBook.toString() + "\n";
+		books.myBook.discount();
+		books.yourBook.discount();
+		books.ourBook.discount();
+		var secondPrint = books.myBook.toString() + "\n" + books.yourBook.toString() + "\n" + books.ourBook.toString() + "\n";
+		var allPrint = firstPrint + "\n" + secondPrint;
+		alert(allPrint);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

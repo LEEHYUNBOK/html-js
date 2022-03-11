@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script>
+        /*
+         파일 이름 : hw15_6.html
+         작성자 : 이현복
+         작성일 : 2018-11-26
+         내용 : - id myList 전에 li "새 내용 추가 1을 추가하고
+                - id myList 다음 위치에 내용을 복사하여 추가하시오.
+        */
+        $(function () {
+            var st1 = '<li>새 내용 추가 1</li>';
+            $('#myList').before(st1);
+            $('#myList').after($('#myList').clone());
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li id="myList">내용</li>
+    </ul>
+</body>
+</html>

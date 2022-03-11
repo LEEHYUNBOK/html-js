@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+		/*
+		 파일 이름 : hw8_4.html
+		 작성자 : 이현복
+		 작성일 : 2018-10-15
+		 내용 : [hw7_1]의 books 배열에서 가격이 비싼 순으로 정렬하여 
+				출력하고 가장 비싼 책 2권만 저장하고 출력하시오.
+		*/
+		function Book(title, price, year, author){
+			this.title = title;
+			this.price = price;
+			this.year = year;
+			this.author = author;
+
+			this.toString = function(){
+				return this.title + " " + this.price + " " + this.year + " " + this.author;
+			};
+			this.getPrice = function(){
+				return price;
+			};
+		}
+
+		Book.prototype.discount = function(){
+			if(this.year == 2014){
+				this.price = this.price - this.price/10;
+			}
+			else if (this.year < 2014){
+				this.price = this.price - this.price/2;
+			}
+		};
+
+		var books = [];
+		books.push(new Book("java", 10000, 2014, "정우성"));
+		books.push(new Book("database", 20000, 2013, "장동건"));
+		books.push(new Book("computer", 30000, 2009, "강동원"));
+		books.sort(function(l,r) {
+			return r.getPrice() - l.getPrice();
+		});
+		books = books.slice(0,2);
+		var output = "";
+		for(var i in books) {
+			output += books[i].toString()+"\n";
+		}
+		alert(output);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

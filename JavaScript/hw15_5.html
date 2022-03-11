@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script>
+        /*
+         파일 이름 : hw15_5.html
+         작성자 : 이현복
+         작성일 : 2018-11-26
+         내용 : - each 메소드를 이용하여 m의 하위 li태그의 내용을 리스트1, 리스트2, 리스트3로 변경하시오.
+        */
+        $(function () {
+            $('#m li').each(function (index, item) {
+                $(item).text('리스트' + (index+1));
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="m">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+    </ul>
+
+    <ul id="n">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+    </ul>
+</body>
+
+</html>

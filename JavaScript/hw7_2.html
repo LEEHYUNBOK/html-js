@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script>
+		/*
+        파일 이름 : hw7_2.html
+        작성자 : 이현복
+        작성일 : 2018-10-08
+        내용 : 필드: 반지름, x좌표, y좌표(세 값 모두 실수)
+			메소드: 총 8개
+				 각 필드에 대한 getter와 setter
+				  (단, 반지름을 음수로 설정하려고 시도하면 음수 대신 1.0으로 설정)
+				  area - 면적을 계산하여 리턴(파이값은 3.14로 할 것). 
+						 매개변수:       리턴값:
+				  move - x축 이동거리와 y축 이동거리를 매개변수로 받아 x, y 좌표에 더함
+						매개변수:       리턴값:
+			- 다음을 수행
+			(1) 원 객체를 두개 생성(circle1, circle2라고 부르자)
+			(2) circle1의 반지름을 1.5, 좌표를 (3, 4)로 설정
+			(3) circle2의 반지름을 -1.5, 좌표를 (-3, -4)로 설정
+			(4) circle1을 x축으로 20, y축으로 10만큼 이동
+			(5) circle2도 x축으로 20, y축으로 10만큼 이동
+			(6) circle1, circle2 에게 각자의 현재 x, y좌표와 면적을 물어보아 알아내어 출력
+		*/
+		function Circle(radius, x, y){
+			if(radius<0){
+					radius = 1.0;
+			}
+			this.radius = radius;
+			this.x = x;
+			this.y = y;
+
+			this.getRadius = function(){
+				return radius;
+			}
+			this.setRadius = function(radius){
+				this.radius = radius;
+			}
+			this.getX = function(){
+				return x;
+			}
+			this.setX = function(x){
+				this.x = x;
+			}
+			this.getY = function(){
+				return y;
+			}
+			this.setY = function(y){
+				this.y =y;
+			}
+			this.area = function(){
+				return radius*radius*3.14;
+			}
+			this.move = function(xPlus, yPlus){
+				x += xPlus;
+				y += yPlus;
+			}
+		}
+		var circle1 = new Circle(1.5, 3, 4);
+		var circle2 = new Circle(-1.5, -3, -4);
+		circle1.move(20,10);
+		circle2.move(20,10);
+		var print1 = "circle1의 (x,y) = (" + circle1.getX() + "," + circle1.getY() + ")" + "\n"+
+		               "면적 = " + circle1.area()+"\n";
+		var print2 = "circle2의 (x,y) = (" + circle2.getX() + "," + circle2.getY() + ")" + "\n"+
+		               "면적 = " + circle2.area()+"\n";
+		var allPrint = print1 + "\n" + print2;
+		alert(allPrint);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
